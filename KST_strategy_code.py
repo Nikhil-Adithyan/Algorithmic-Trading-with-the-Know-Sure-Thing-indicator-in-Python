@@ -163,7 +163,7 @@ for i in range(len(tsla_ret)):
     
 kst_strategy_ret_df = pd.DataFrame(kst_strategy_ret).rename(columns = {0:'kst_returns'})
 investment_value = 100000
-number_of_stocks = floor(investment_value/tsla['close'][-1])
+number_of_stocks = floor(investment_value/tsla['close'][0])
 kst_investment_ret = []
 
 for i in range(len(kst_strategy_ret_df['kst_returns'])):
